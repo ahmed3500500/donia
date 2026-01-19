@@ -37,7 +37,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-data class DhikrItem(val text: String, val count: Int)
+data class AzkarDhikrItem(val text: String, val count: Int)
 
 @Composable
 fun AzkarScreen(modifier: Modifier = Modifier) {
@@ -47,26 +47,26 @@ fun AzkarScreen(modifier: Modifier = Modifier) {
     // ملاحظة: هذه قاعدة بسيطة كبداية. يمكنك توسيعها لاحقاً (إضافة 100+ ذكر لكل قسم).
     val morning = remember {
         listOf(
-            DhikrItem("أصبحنا وأصبح الملك لله...", 1),
-            DhikrItem("اللهم بك أصبحنا وبك أمسينا...", 1),
-            DhikrItem("سبحان الله وبحمده", 100),
-            DhikrItem("لا إله إلا الله وحده لا شريك له...", 100)
+            AzkarDhikrItem("أصبحنا وأصبح الملك لله...", 1),
+            AzkarDhikrItem("اللهم بك أصبحنا وبك أمسينا...", 1),
+            AzkarDhikrItem("سبحان الله وبحمده", 100),
+            AzkarDhikrItem("لا إله إلا الله وحده لا شريك له...", 100)
         )
     }
     val evening = remember {
         listOf(
-            DhikrItem("أمسينا وأمسى الملك لله...", 1),
-            DhikrItem("اللهم بك أمسينا وبك أصبحنا...", 1),
-            DhikrItem("أعوذ بكلمات الله التامات من شر ما خلق", 3),
-            DhikrItem("سبحان الله وبحمده", 100)
+            AzkarDhikrItem("أمسينا وأمسى الملك لله...", 1),
+            AzkarDhikrItem("اللهم بك أمسينا وبك أصبحنا...", 1),
+            AzkarDhikrItem("أعوذ بكلمات الله التامات من شر ما خلق", 3),
+            AzkarDhikrItem("سبحان الله وبحمده", 100)
         )
     }
     val sleep = remember {
         listOf(
-            DhikrItem("باسمك اللهم أموت وأحيا", 1),
-            DhikrItem("اللهم قني عذابك يوم تبعث عبادك", 3),
-            DhikrItem("سبحان الله (33) الحمد لله (33) الله أكبر (34)", 1),
-            DhikrItem("آية الكرسي", 1)
+            AzkarDhikrItem("باسمك اللهم أموت وأحيا", 1),
+            AzkarDhikrItem("اللهم قني عذابك يوم تبعث عبادك", 3),
+            AzkarDhikrItem("سبحان الله (33) الحمد لله (33) الله أكبر (34)", 1),
+            AzkarDhikrItem("آية الكرسي", 1)
         )
     }
 

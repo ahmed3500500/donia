@@ -42,7 +42,6 @@ import kotlinx.coroutines.withContext
 fun TasbeehScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val haptic = LocalHapticFeedback.current
-    val haptic = LocalHapticFeedback.current
     var count by remember { mutableIntStateOf(0) }
     var stats by remember { mutableStateOf(TasbeehStats()) }
 

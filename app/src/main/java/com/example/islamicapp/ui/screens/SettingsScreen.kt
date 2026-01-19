@@ -49,8 +49,8 @@ fun SettingsScreen() {
         val snap = SettingsStore.getSnapshot(context)
         enableAdhan = snap.enableAdhan
         enableVibrate = snap.enableVibrate
-        enablePrayerNotifications = snap.enablePrayerNotifications
-        enableAzkarNotifications = snap.enableAzkarNotifications
+        enablePrayerNotifications = snap.enablePrayerNotif
+        enableAzkarNotifications = snap.enableAzkarNotif
     }
 
     Column(
@@ -93,7 +93,7 @@ fun SettingsScreen() {
             checked = enablePrayerNotifications,
             onCheckedChange = {
                 enablePrayerNotifications = it
-                saveBoolean(context, SettingsStore.KEY_ENABLE_PRAYER_NOTIFICATIONS, it)
+                saveBoolean(context, SettingsStore.KEY_ENABLE_PRAYER_NOTIF, it)
             }
         )
 
@@ -103,7 +103,7 @@ fun SettingsScreen() {
             checked = enableAzkarNotifications,
             onCheckedChange = {
                 enableAzkarNotifications = it
-                saveBoolean(context, SettingsStore.KEY_ENABLE_AZKAR_NOTIFICATIONS, it)
+                saveBoolean(context, SettingsStore.KEY_ENABLE_AZKAR_NOTIF, it)
             }
         )
 

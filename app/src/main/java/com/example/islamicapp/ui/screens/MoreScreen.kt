@@ -38,6 +38,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.islamicapp.qibla.QiblaCalculator
+import com.example.islamicapp.ui.Routes
 import com.example.islamicapp.tasbeeh.TasbeehPreferences
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -80,6 +81,48 @@ fun MoreScreen(
         NamesOfAllahSection()
         SettingsPreviewSection()
         Spacer(modifier = Modifier.height(8.dp))
+    }
+}
+
+@Composable
+private fun QuickNavRow(onNavigate: (String) -> Unit) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF14402A)),
+        shape = RoundedCornerShape(20.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Button(
+                onClick = { onNavigate(Routes.PrayerTimes) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFFD700))
+            ) {
+                Text(text = "مواقيت الصلاة", color = Color(0xFF062D1A), fontSize = 12.sp)
+            }
+            Button(
+                onClick = { onNavigate(Routes.Tasbeeh) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0B5B34))
+            ) {
+                Text(text = "السبحة", color = Color.White, fontSize = 12.sp)
+            }
+            Button(
+                onClick = { onNavigate(Routes.Azkar) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF14402A))
+            ) {
+                Text(text = "الأذكار", color = Color.White, fontSize = 12.sp)
+            }
+            Button(
+                onClick = { onNavigate(Routes.Qibla) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF14402A))
+            ) {
+                Text(text = "القبلة", color = Color.White, fontSize = 12.sp)
+            }
+        }
     }
 }
 
